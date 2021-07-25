@@ -1,0 +1,7 @@
+alt ctrl x 도구상자
+텍스트입력하면 바로 검색
+label 바로 키보드 누르면 text 바뀜
+
+shift x누르면 창닫힘
+
+ctrl 누르고 마우스로 끌면 winform객체가 복제됨

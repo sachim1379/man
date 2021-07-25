@@ -1,0 +1,57 @@
+balenaEtcher(프로그램//node.js랑 electron gui로 개발//오픈소스)
+    kali-linux홈페이지: liveboot용 이미지파일 있음
+    iso파일써서 usb에 운영체제 이미지 생성
+    대체 프로그램 많다(imageWriter,Rufus 등)
+
+사실 운영체제도 윈도우 독점은 약한독점인게
+대안이 많고 어차피 전부 유닉스기반임
+
+vmware 가상머신
+    정확한이름은 vmware workstation player
+    vmware는 회사이름, 다운로드는 홈페이지
+    product(모든제품) 
+
+
+servername: 컴퓨터이름 로그인할때 안필요
+username: 로그인할때 필요
+ps:초기설치시 입력, initial 재부팅시 필요
+
+처음엔 루트에 비번 안설정되있음
+사용자명 passwd
+    특정사용자 암호부여
+
+root passwd
+
+계정전환
+    su 사용자명
+        사용자명없으면 루트로 바꿈
+    exit su로 바꾸기 이전 사용자로 바꿈
+
+    Sens-x170(하얀넷북)
+        서버네임: frogservername
+        사용자명: frogusername
+        ps: frog
+        root: root
+        ps: frog
+
+ 바이오스진입(컴퓨터킬때 버튼연타하는거)
+     윈r(실행)->cmd->dxdiag->메인보드제조사 내거는 a520m h
+     구글검색: 노트북은 브랜드별(삼성엘지아수스msi) 메인보드는 제조사(기가바이트,애즈락)
+     msi는 delelte 
+     기가바이트는 del이거나 f2
+     f10도 있는데 보통 3개중 하나
+
+터미널 복붙할라면 윈도우랑 다르게
+    shift ctrl c v임
+
+실행파일로 바꾸기
+    chmod +x 파일이름
+
+실행
+    ./파일이름
+    쩜은 여기를 말함 쩜쩜은 전
+
+mv 이름 바꿀이름
+mv 이름 디렉토리 
+    디렉토리로 옮겨짐 디렉토리는 /로 시작한다로 구분
+    

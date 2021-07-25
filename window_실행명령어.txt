@@ -1,0 +1,2 @@
+실행(win+r)
+shell:startup -> 시작프로그램리스트

@@ -1,0 +1,67 @@
+git bash
+깃 공식임
+    openSSH 사용
+    mingw64 기반
+        mingw는 윈도우에서 사용할수있는 버전의 gcc
+
+        환경변수
+            환경변수에 등록되있어야 cmd에서 그 프로그램 쓸수있음
+            환경변수 추가하는 법
+            시스템설정 - 고급시스템설정 - 시스템속성 - 환경변수 버튼 클릭
+            그럼 창이 뜨는데 sachi에 대한 사용자 변수랑 시스템 변수 이렇게 두개 있다
+            걍 별 상관없고 스크롤 내려서 Path -> 여기 리스트에 경로가 적혀있는 프로그램만 cmd로 실행할수있다
+                ex)git은 시스템변수에 path에 있음
+                실제로 path에 적힌 git.exe 경로 바꾸면 cmd에 이렇게 뜬다
+                    'git'은(는) 내부 또는 외부 명령, 실행할수있는 프로그램 또는 배치파일이 아닙니다.
+
+--help 는 장문 도움말 보기
+git commit -h 는 옵션의 도움말 보기
+
+깃 레포지터리(깃용 폴더)가 아니면 깃명령어를 쓸수없다
+깃용 폴더로 바꾸는 방법은 탐색기 주소창에 cmd.
+cmd 에서 git init
+그러면 해당폴더에 숨김폴더로 .git이라는 폴더가 생김 그럼 깃 레포지터리로 변한거.
+dir /a로 숨김파일까지 다 볼수있다(all)
+
+깃터미널에 로그인
+    git config : config파일을 수정하는 명령어
+        깃에서 로그인은 config파일에 username이랑 useremail이 씌이는거임.
+        git 계정 종류는 --global --system --local --worktree
+            이렇게 있는데 걍 --global 쓴다
+        git config -l : config파일을 전부 읽어온다 =. 여기서 username, useremail 확인가능
+        삭제는 git config --unset-all --global user.name
+
+
+github랑 연결
+    깃허브에서 레포지터리 만든다
+    처음 만들면 어딘가의 로컬에서는 처음 설정해줘야함
+    그니까 처음 레포를 만들고 파일 저장할라면 데스크톱이나 로컬pc가 있어야된다.
+    근데 깃허브에서 알려주는데로 치면된다
+    git init 이 되어있는 폴더에서
+    git remote add origin(별명) 주소
+    git branch -M main
+    git push -u origin main
+        origin은 원격저장소 별명 나중에 별명 이용해 접근
+    git remote
+        원격저장소리스트(별명으로 뜸)
+        *검은색 아무것도 안뜨면 없는거
+    git branch 처음에는 메인 브랜치를 만들어주어야함
+
+*깃허브 데스크톱에서는 방법이 두개인데
+    깃허브데스크톱에서 레포지토리를 만든후 퍼블리시하는 방법
+        그러면 .gitattributes 라는 파일을 자동으로 만들고(수정파일한파일과 커밋이 없으면 publish가 안된다.)
+        Initial commit이라는 커밋을 자동으로 생성한 다음 퍼블리시까지 해준다 존나 편한거
+
+    반대로 깃허브 사이트에서 레포지토리를 만든 후 그걸 깃허브 데스크톱으로 클론해오면
+    수정된 파일이 하나도 없고 커밋도 없기 때문에 퍼블리시가 안된다
+    그래서 텍스트파일이던 뭐던 하나 만들고 커밋까지 해준다음에 퍼블리시가 된다
+
+    같은 원리로 git 터미널에서도
+    수정파일과 커밋이 없으면 퍼블리시가 안된다.
+    그래서 readme.md를 만들고(수정파일)
+    커밋을 해준다음(-m 안하면 vim으로 열려서 귀찮다. 강제저장나가기는 !wq)
+    git branch -M main 으로 브랜치 만들어주고 (이건 정확히 뭔지 모르겠다..)
+    git push -u origin main 으로 만들어준 리모트를 밀어넣어준다(commit이 없으면 push가 안된다.)
+
+.git 숨김폴더 때문에 삭제가 안되는 경우
+    해당폴더 cmd. - git remote 로 리모트확인, git remote remove "origin"으로 삭제후 재시도하면 삭제가능
