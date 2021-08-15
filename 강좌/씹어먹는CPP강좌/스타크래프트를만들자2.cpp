@@ -39,3 +39,4 @@ int main(){
     marine1.show_status();
     marine2.show_status();
 }
+change test 3pop pc room
