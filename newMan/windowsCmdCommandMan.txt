@@ -1,0 +1,9 @@
+cls
+	clear screen
+
+dir
+	=ls
+
+cd
+	change directory
+

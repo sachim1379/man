@@ -1,0 +1,18 @@
+
+path에 추가하기
+https://zzinise.tistory.com/21 참고
+
+리눅스에서 옵션은 앞에다 붙여도 되고 뒤에다 붙여도 되고 
+옵션 파일명 옵션 이런식으로 뒤죽박죽 써도 bar만 있으면 명령어옵션으로 인식한다
+
+rm [파일]
+	파일을 삭제
+
+rm -r [file] -f
+	delete directory recursively
+	if no option -f, many many y required...
+
+<options>
+	-rys
+		--가 안붙고 -가 붙으면 전부 한글자 옵션으로 인식한다. 즉, 한글자짜리 옵션은 하나의 -안에다가 다 넣어서 한번에
+		실행할수있다.

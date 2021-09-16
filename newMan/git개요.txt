@@ -1,0 +1,37 @@
+remote : 파일이 저장되는 실제 서버를 의미함. remote server
+origin : remote server의 관례적인 이름.
+
+push : 리모트에다 갖다 밀어넣는것.
+pull : 리모트에서 묻지도 따지지도 않고 가져오는것.
+fetch : pull인데, 확인하고 가져오는것(로컬의 코드와 비교한후 가져옴)
+
+<push 하는법>
+git add 하고,
+git commit 하고,
+git push 해야 올라감
+
+add하지 않은 파일은 untracked files 이다.
+
+git add [파일이름] 하면
+tracked된다.
+
+
+
+git status
+파일이 수정되면 modified 라고 뜬다
+
+<branch>
+git branch : 현재 branch 확인
+현재 위치한 브랜치 옆에 *이 표시된다.
+
+git checkout [branch이름] : 해당 브랜치로 이동
+없는 브랜치로 이동하려고하면 오류뜸
+
+git branch [새branch이름] : 브랜치 생성
+기본브랜치는 main임.
+
+
+리눅스에서 옵션은 앞에다 붙여도 되고 뒤에다 붙여도 되고 
+옵션 파일명 옵션 이런식으로 뒤죽박죽 써도 bar만 있으면 명령어옵션으로 인식한다
+
+
