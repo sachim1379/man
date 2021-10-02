@@ -47,3 +47,6 @@ print(1,2,3,end='') #no escape-each print
 \\ 문자자체를 출력
 \n 개행 sequence
 \t tap sequence
+
+상대경로로 부모폴더를 표시할수있음
+..\ 이렇게!
