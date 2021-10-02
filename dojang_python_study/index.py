@@ -1,4 +1,6 @@
-year, month, day, hour, minute, second = input().split()
+a = 2;
+b = a;
+c = 4;
 
-print
-print(hour,minute,second,sep=':')
+print(a is b)
+print(a is c)
