@@ -1,0 +1,32 @@
+//////input
+
+터미널에 안내문자열을 띄우고 엔터로 입력스트림받기
+a = input('input number : ')
+
+.split() 메소드
+str인 객체에 쓰면 defualt:space 로 string을 분할한뒤, 그 리스트를 반환
++ 리스트 언패킹을 즉시 실행
+a,b = input('input multiple number(devid by space) : ').split()
+
+인자로 분할기준을 설정가능
+콤마를 기준으로 분할 split(',')
+
+입력을 정수로 변환해서 저장
+a = int(input("your number :"))
+
+
+map() 함수
+함수,interable 를 넘겨주면, 모든 리스트에 대해 함수를 한번씩 일괄실행.
+split()의 모든 변수에 대해 int를 한번씩 실행 : map(arg,arg)
+a,b = map(int,input("input multiple number : ").split())
+
+/ 진짜 나눠진 결과를 실수로 연산후 저장
+// 몫 연산
+
+//////print
+
+print의 sep설정 : default_value = space
+print(1,2,3,sep='') #no space
+
+print의 end설정 : defualt_value = \n
+print(1,2,3,end='') #no escape-each print

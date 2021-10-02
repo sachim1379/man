@@ -1,0 +1,40 @@
+
+<single_quotes, double_quotes>
+
+따옴표 세개를 쓰면
+쉘에서 여러줄 문자열을 입력가능.
+
+''' ''' / """ """ 이런식
+
+작은따옴표 안에 큰따옴표 넣기 가능
+큰따옴표 안에 작은따옴표 넣기 가능
+
+따옴표 세개쓰면 둘다 섞어서 넣기 가능
+
+작은따옴표안에 작은따옴표를 굳이 시발 넣고싶으면!
+'Python isn\'t difficult'
+올림나누기 escape sequence 사용.
+
+<한글문자열 출력이 안될때>
+.py파일을 CP949로 저장했기 때문.
+UTF-8로 저장해야함.
+*마이크로소프트 메모장의 기본인코딩은 CP949임. 병신들
+
+<파이썬쉘에서는 문자열임을 표시해줄려고 따옴표를 붙여줌>
+->실제로는 안붙어있음.
+
+s=''''Python' is a "programming language"
+that lets you work quickly
+and
+integrate systems more effectively.'''
+
+이거랑
+
+s=''''
+Python' is a "programming language"
+that lets you work quickly
+and
+integrate systems more effectively.
+'''
+
+이거는 다른거임 *앞 엔터가 문자열에 포함되어버림
