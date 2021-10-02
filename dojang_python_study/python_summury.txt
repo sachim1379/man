@@ -1,0 +1,49 @@
+one line comments #
+multi line comments ''',''' ""","""
+
+indent 표준은 space * 4
+*탭이 아니다
+
+*곱셈과 나눗셈이 우선순위로 계산됨.
+
+*None 은 다른언어의 Null을 의미, 변수값이 비어있음을 의미함.
+
+*input 의 입력값은 항상 문자열임.
+
+타입출력함수 type(arg)
+
+터미널에 안내문자열을 띄우고 엔터로 입력스트림받기
+a = input('input number : ')
+
+공백을 기준으로 여러개 저장 split()
+a,b = input('input multiple number(devid by space) : ').split()
+
+콤마를 기준으로 분할 split(',')
+
+입력을 정수로 변환해서 저장
+a = int(input("your number :"))
+
+split()의 모든 변수에 대해 int를 한번씩 실행 : map(arg,arg)
+a,b = map(int,input("input multiple number : ").split())
+
+/ 진짜 나눠진 결과를 실수로 연산후 저장
+// 몫 연산
+
+파이썬 변수 이름은 영문과 밑줄문자로 시작할수있지만.
+숫자와 특수문자로 시작할 수 없다.
+키워드는 사용할수없다
+
+None은 키워드이므로 반드시 대문자로 시작하여야한다.
+
+
+print의 sep설정 : default_value = space
+print(1,2,3,sep='') #no space
+
+print의 end설정 : defualt_value = \n
+print(1,2,3,end='') #no escape-each print
+
+제어문자(escape Sequence)
+*/가 아님, 상승나눗셈 \, 달러표시
+\\ 문자자체를 출력
+\n 개행 sequence
+\t tap sequence
