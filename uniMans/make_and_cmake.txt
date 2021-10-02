@@ -1,0 +1,6 @@
+
+
+#make and cmake
+
+make -> basic package of ubuntu
+cmake -> != basic package (sudo apt install cmake required)
