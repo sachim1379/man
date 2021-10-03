@@ -1,0 +1,24 @@
+HTTP
+*프로토콜임
+req 와 response
+동시에 불가능함
+req가 오기전까지는 서버는 아무것도 할수가없다.
+http://
+
+
+WebSocket
+*프로토콜임
+realtime임
+ws://nomadcoders.co
+
+순서
+client Websocket request를 보낸다
+server Websocket accept 한다
+>>connection establish(연결성립)
+
+한번 연결되고 나면, realtime으로 소통할수있다.
+그냥 서버랑 클라이언트의 카카오톡이 생성됨.
+
+자바스크립트 전용은 아니지만 이미 구현된게 있어서 자바스크립트에서도 사용할수있다.
+두개의 백앤드가 웹소켓으로 통신할수도있다.
+

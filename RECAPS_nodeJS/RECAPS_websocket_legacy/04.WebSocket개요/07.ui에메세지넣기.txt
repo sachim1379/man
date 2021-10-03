@@ -1,0 +1,7 @@
+socket.addEventListener("message", (message) => {
+    //console.log("New message:", message.data, "from the Server.");
+    const li = document.createElement('li'); //리스트를 만든다.
+    li.innerText = message.data; //리스트에 메세지의 값을 넣는다.
+    messageList.append(li);//그리스트를 messageList에 append한다.
+});
+

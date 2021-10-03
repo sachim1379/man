@@ -1,0 +1,17 @@
+npm list express
+npm_modules 폴더에 해당 모듈이 있는지 검사한다.
+-g 옵션이 없으면 명령어를 실행한 디렉토리부터 하위에 있나없나 검사한다.
+
+npm list -g express
+해당 컴퓨터의 전역 npm_modules(/AppData폴더에 있다)에
+해당모듈이 있는지 검사한다.
+
+npm install express 
+*명령어가 실행된 디렉토리에 node_modules 디렉토리가 존재하면 그안에 설치한다.
+node_modules디렉토리가 없으면 생성한뒤 그안에 설치한다.
+package-lock.json이 자동생성된다. 마찬가지로 이미 있으면 그냥 있는파일에 추가됨.
+
+옵션을 별도로 지정하지않으면 지역설치(local)이며 -g옵션을 지정하면 전역설치(global)이다.
+지역설치에서 다운로드되는 지역인 명령어가 실행된 디렉토리부터 끝 하위디렉토리까지를 프로젝트 루트디렉터리 라고한다.
+
+package-lock.json은 다운받은 npm모듈들간의 의존성을 기록해놓은 파일이다.

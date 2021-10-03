@@ -1,0 +1,9 @@
+프론트엔드를 수정할때는 nodemon이 재시작되지 않았으면 좋겠어
+nodemon.json을 수정한다.
+
+{
+    "ignore": ["src/public/*"],
+    "exec": "babel-node src/server.js"
+    }
+
+그러면 public은 수정해도 nodemon이 인식을 안해서 재시작하지않는다.

@@ -1,0 +1,42 @@
+ws는 node.js용 webSockt이다. (implement.라고함. 어떤 규칙을 따르는 코드.)
+npmjs.com (npm 공식 홈페이지임)
+에 들어가서 ws로 검색하면 찾을수있다.
+
+ws는 core이다.
+채팅방 같은건 ws에 포함되어있지않다.
+
+ws를 이용한 framework가 또 있다.
+이걸로 채팅방같은걸 만들면 편하다.
+
+express는 http 프로토콜이고
+ws는 websocket 프로토콜.
+
+이걸 같은 서버에 합칠수있다. 물론 프로토콜은 다름.
+
+import http from "http";
+를 추가하면 nodeJS의 기본 http 기능을 쓸수있다.
+http는 기본모듈이기때문에 npm으로 설치하지않아도 쓸수있다
+
+http.createServer(app);
+서버를 만든다.
+그러나 변수로 지정해주지못하면 나중에 접근을 못하기때문에.
+const server = http.createServer(app);
+요렇게 해준다.
+
+import WebSocket from "ws";
+const wss = new WebSocket.Server();
+
+마찬가지로 ws서버를 만든다.
+
+const wss = new WebSocket.Server({server});
+이렇게하면 http서버와 webSocket이 같이 integration된다.
+
+물론 integration안해도된다.
+만약 integration을 안하면 wss서버와 http서버가 다른 포트를 사용하게된다.
+
+integration을 했으므로,
+Listening on http://localhost:3000
+Listening on ws://localhost:3000
+
+가 동일하게 작동한다.
+즉 http:// 주소로 들어가도 ws주소로 들어간것처럼된다.

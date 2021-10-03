@@ -1,0 +1,16 @@
+prompt();
+알림창을 띄우고 자바스크립트를 중지시킨다
+*중지시키므로 잘 안쓴다
+
+parseInt()
+string을 받아서 integer 반환
+문자열을 숫자로 바꿔줌
+
+NaN 은 not a number 이라는 뜻이다.
+
+isNaN()
+boolean을 반환
+값이 NaN이면 true를 반환
+
+else if는 상위조건문을 false로 통과해야 실행된다.
+

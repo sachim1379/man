@@ -1,0 +1,38 @@
+const express = require("express"); //모듈을 로드한다
+const app = express(); // express()객체를 생성한다
+
+app.listen(3000, function () { 
+    console.log("server enabled");
+});
+
+//포트를 지정한다. 두번째인자는 리스닝이 성공했을때 실행할 콜백함수.
+
+또는 app.listen(3000) //그냥 포트지정만할수도있다
+
+
+app.get('/', function (req, res) {
+    console.log(req);
+    console.log(res);
+    console.log('hello world');
+    res.send('hey');
+});
+
+
+즉
+app.get('/',function(req,res){});
+
+는 '/'로 get req가 들어오면
+function을 작동시킨다.
+
+'/'는 주소뒤에 아무것도 안붙은걸 말한다.
+'/foo'로 할경우, 크롬주소창에 localhost:3000/foo 로 해야 저함수가 작동한다.
+
+function(req,res)
+에서 req는 객체이다. 클라이언트 요청정보를 담고있다.
+
+
+이 request는 크롬-콘솔-network-새로고침(ctrl R)-localhost-Header에 나와있다.
+Request URL은 http://localhost:3000/ 즉 주소창에 입력한값.
+Request Method는 GET
+x-PoweredBy 를 보면 express 를 사용했음도 알수있다.
+->이건 보안설정으로 서버측에서 못확인하게 막을수도있다. 이걸 헤더정보라고함. 서버의 정보를 담고있다.

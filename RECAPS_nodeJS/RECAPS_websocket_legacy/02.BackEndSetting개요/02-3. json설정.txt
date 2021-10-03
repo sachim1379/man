@@ -1,0 +1,41 @@
+nodemon.json 을 열어서
+>>
+{
+    "exec":"babel-node src/server.js"
+}
+
+이렇게 하면 nodemon이 실행될때마다
+저 코드를 exec한다.
+그니까 콘솔창에 nodemon babel-node src/server.js 를
+치는거랑 같은 효과임.
+
+babel.config.json 을 열어서
+>>
+{
+    "presets":["@bebel/preset-env"]
+}
+    
+packge.json을 열어서
+  "scripts": {
+    "dev": "nodemon"
+  },
+  
+  추가.
+
+nodemon이 호출되면 nodemon은 nodemon.json을 찾아서 거기있는 코드를 먼저 실행한다.
+
+package.json의 scripts를 실행하는 방법은,
+npm run dev
+이다
+
+npm run dev를 입력하면 다음 순서로 실행된다.
+
+nodeJS가 실행된다(server.js가 실행된다) 
+nodeJS가 package.json의 script안에있는 dev : "nodemon" 을 실행시킨다 -> nodemon이 실행된다
+nodemon이 nodemon.json의 exec를 실행시킨다 -> 전체node가 babel-node에 의해 실행된다 -> 구버전자바스크립트와 호환된다.
+
+이걸 일괄작업이라고 하며, ctrl C 로 전부 종료할수있다.
+
+이때, npm run 은 커맨드라인(vsconsole)을 통해 실행하기 때문에, dependency로 설치된 babel-node를 없다고 인식할수있다
+(컴퓨터전체에는 안깔려있고, zoom폴더안에만 깔려있기때문에.)
+그러므로 npm i -g @babel/node 로 전역으로 설치해주면 해결된다.

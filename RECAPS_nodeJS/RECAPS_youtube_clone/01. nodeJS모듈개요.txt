@@ -1,0 +1,13 @@
+require() 함수를 통해 외부모듈을 가져올수있다.
+
+const foo = require('파일 경로')
+
+
+const moment = require("moment");
+이건 NodeJS에서 사용하는 CommonJS 문법
+
+import moment from "moment";
+이건 ES6(2015년에 만들어진 js신규문법)에서 새롭게 도입된방법
+파이썬하고 똑같다.
+
+두개는 정확히 동일한 기능을한다.

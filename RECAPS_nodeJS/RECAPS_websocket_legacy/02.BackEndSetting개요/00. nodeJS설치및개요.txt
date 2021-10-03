@@ -1,0 +1,49 @@
+node.js.org 에서 lts버전을 선택해서 msi로 설치
+
+설치msi가 자동으로 윈도우파워쉘을 통해 의존성인 python,visualstudio,chocolaty(마소가 만든 윈도우패키지매니저)
+설치해줌
+
+npm은 자동다운로드됨
+npm -g옵션
+글로벌로 설치함
+
+node init 명령어
+package.json 파일 생성
+라이센스 등 표시
+
+npm install nodemon -g
+글로벌로 패키지다운로드 명령어
+
+웹개발필수패키지
+nodemon(node monitor)
+매번 노드명령어를 실행하지 않아도 파일이 수정되면 노드를 재실행시켜줌
+
+express.js
+노드 웹서버
+
+express-generator
+웹서버를 구동하기위한 파일들과 폴더구조를 자동으로 만들어줌
+
+VScode 콘솔: clear
+콘솔창을 깨끗하게 해줌
+
+로컬상의 글로벌 패키지목록확인(설치리스트)
+node list --depth=0 -g
+
+express : 이 시스템에서 스크립트를 실행할 수 없으므로 C:\Users\Ostrich\AppData\Roaming\npm\express.ps1 파일을 로드할 수 없습니다.
+이 오류가 뜨는 경우.
+vscode console에서 WindowsPowerShell에 접근할수없음을 의미. 파워쉘 자체의 보안설정(원격으로 스크립트실행)이 restricted 로 되어
+있기 때문임.
+
+*반드시 관리자권한파워쉘 실행
+PowerShell에서
+executionpolicy
+Restricted로 되어있다.
+
+set-executionpolicy remotesigned 또는 unrestricted
+그럼 인제 됨.
+
+express [프로젝트 디렉토리명]
+
+express sample
+하면 sample폴더에 bin, public, routes, views, app.js, package.json 생성

@@ -1,0 +1,31 @@
+
+http는 req 와 res로 작동한다
+request (client) -> respond (server)
+
+req에는 종류가 있다. 이걸 method라 한다.
+이건 html form설정에서 지정할수있다(무슨 종류의 request를 보낼지)
+
+10가지 이상 종류의 method가 있지만 보통 사용되는 4가지는 다음과 같다
+POST
+GET
+PUT
+DELETE
+
+http request에서, (브라우저가 서버로 보내는)
+method는 동사고, URL은 목적어이다
+
+const app = express();
+app변수를 선언해서 express()객체를 담는다.
+
+app.post()
+app.get()
+app.put()
+app.delete()
+를 사용할수있게된다.
+
+첫번째파라매터는 URL문자열이 들어간다.
+두번째파라매터에는 콜백함수가 들어간다.
+
+
+
+

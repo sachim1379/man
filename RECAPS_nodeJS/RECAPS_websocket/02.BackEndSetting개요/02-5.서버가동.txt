@@ -1,0 +1,6 @@
+npm run dev 를 하고나서
+브라우저주소창에
+localhost:3000
+
+refused에러가 아니라
+Cannot GET / 가 뜨면 웹서버 구동성공.

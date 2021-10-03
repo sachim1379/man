@@ -1,0 +1,17 @@
+npm으로 다운받은 것들은 node 모듈이다.
+
+남들이 미리 만들어놓은것을 쓸수있다.
+npm install로 다운받은 모듈의 저장경로는 윈도우의 경우
+로컬c/사용자/Ostrich/node_modules 이다.
+
+npm install -g 는 전역이므로
+C:/사용자/AppData/Roaming/npm/node_modules
+에 저장된다(이러면 모든 사용자가 쓸수있으므로.)
+
+npm config 로 설치경로를 바꿀수도있다.
+
+js파일에서 이를 불러오는 방법은
+ES6 기준
+
+import express from "express";
+>>놀랍게도 파이썬 문법과 동일하다

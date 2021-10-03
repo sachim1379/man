@@ -1,0 +1,6 @@
+src/public 을 만들고
+안에 app.js 생성
+
+src/views 를 만들고
+안에 home.pug 생성
+

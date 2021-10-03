@@ -1,0 +1,29 @@
+
+이제 frontend와 backend를 연결해야 connection을 발생시켜보자.
+
+프론트앤드인 app.js (home.pug 즉 html에 연결되어있다)
+에 이렇게 입력
+
+const socket = new WebSocket(`ws://${window.location.host}`);
+
+이제 서버에 접속하면 접속한 대상이 보낸 소켓을 백앤드의 콘솔에서 확인할수있다.
+
+*ws wss
+wss는 ssh처럼 web socket secure을 말한다.
+
+크롬콘솔에서 window.location.host 는 현재있는 주소를 반환한다.
+
+vscode에서 컨B는 메뉴창을 토글한다.
+
+wss.on("connection",handleConnection)
+이렇게 짜고
+function handleConnection(){};
+을 분리하는것보다, 한눈에 알아볼수있게 화살표를 써서
+
+wss.on("connection",(socket)=>{
+    console.log(socket);
+});
+
+이렇게 하는것이 더 나은 코드이다.
+저런 함수들은 콜백으로서만 존재하고, 이름이 없기때문에 익명함수(anonymus Function)
+이라고 부른다.

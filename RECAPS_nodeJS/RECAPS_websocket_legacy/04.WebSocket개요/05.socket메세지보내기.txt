@@ -1,0 +1,33 @@
+
+백앤드와 프론트엔드를 소켓으로 연결한다음,
+메세지를 주고받을수있다.
+
+socket에 eventListener을 붙이면, 이벤트가 발생했을때
+콜백을 실행할수있다 즉 메세지= 이벤트이다.
+
+socket의 이벤트
+open : 양쪽이 연결되었을때 발생
+close : 연결이 끊어졌을때
+message : 메세지를 수신하였을때
+
+
+//app.js
+const socket = new WebSocket(`ws://${window.location.host}`);
+socket.addEventListener("open", () => {
+    console.log("connected to Server!!");
+});
+
+socket.addEventListener("message", (message) => {
+    console.log("Just got this:", message.data, "from the Server.");
+});
+
+socket.addEventListener("close", () => {
+    console.log("disconnected from Server...");
+});
+
+//server.js
+wss.on("connection", (socket) => {//connection이 생기면, socket을 받는다.
+    console.log("Connected to Browser!!");
+    socket.send("hello!");
+
+});

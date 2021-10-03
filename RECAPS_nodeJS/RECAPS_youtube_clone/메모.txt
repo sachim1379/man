@@ -1,0 +1,25 @@
+<js문법>
+
+정의나 선언을 나중에 해도, 순서가 안맞아도 찾아와서 동작해주는걸 호이스팅이라고한다.
+
+화살표함수(ES6)
+=>
+
+let func = (arg1,arg2,arg3) => expression
+이건 아래와 완전히 동일하다.
+
+let function(arg1,arg2,arg3){
+    return expression;
+};
+
+함수선언
+function foo(){
+    expressions
+};
+
+함수표현식(function Expressions)
+var foo = function(){
+    expressions
+};
+
+함수선언식은 호이스팅에 영향을 받지만, 함수표현식은 호이스팅의 영향을 받지않는다.

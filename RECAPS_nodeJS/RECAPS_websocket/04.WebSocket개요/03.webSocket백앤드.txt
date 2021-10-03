@@ -1,0 +1,31 @@
+*nodeJS앱의 backend는 주로 server.js 라고 짓는다.
+
+WebSocket()은
+node.js의 기능이 아니라 브라우저(크롬,사파리)등의 기본 제공함수이다.
+즉 vanila js임
+WebSocket()은 심지어 IE도 지원한다.
+
+https://developer.mozilla.org/ko/docs/Web/API/WebSocket
+
+btn.addEventListener(이벤트,콜백)
+콜백함수는 이름을 hadleConnection 이런식으로 짓는게 관례이다.
+
+
+wss는 이벤트를 핸들할수있다.
+어떻게 하냐면,,
+
+wss.on("conncetion",callback);
+이러면 on메소드는 connection이벤트가 발생할때까지 기다렸다가, 
+connection이 발생하면 callback을 실행한다.
+
+vscode에서 Method에 마우스를 hover하면 설명을 볼수있다.
+*method
+
+wss.on() 에서 on은 wss의 메소드이다.
+
+wss.on("connetcion",handleConnection);
+wss.on은 socket값을 리턴한다.
+
+이제 frontend와 backend를 연결해야 connection을 발생시킬수있다.
+
+vscode에서 ctrl M을 누르면 탭키로 포커스이동모드가 되는데, 이러면 탭키를 쓸수가없다.

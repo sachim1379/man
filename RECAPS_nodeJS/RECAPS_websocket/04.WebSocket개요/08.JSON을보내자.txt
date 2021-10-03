@@ -1,0 +1,57 @@
+JSON.stringify
+
+json문법
+json파일은 json Object이다.
+
+    const msg = {type,payload};
+    return JSON.stringify(msg);
+
+대괄호로 값을 선언하면 json이 된다.
+JSON.stringify(json) 하면 json이 string이 된다.
+
+const message = JSON.parse(msg);
+
+이러면 다시 json으로 돌아온다.
+
+json의 구조
+
+const user ={
+    nickname:"sachim",
+    passwd:"asdf",
+}
+여기서 nickname은 네임이고 "sachim"은 값이다.
+네임과 값은 콜론으로 연결한다.
+niackname 과 sachim이 묶여서 한개의 프로퍼티이다.
+한개의 json은 여러개의 프로퍼티로 구성된다.
+
+프로퍼티끼리는 쉼표로 구분하고, 마지막에도 쉼표를 써준다.
+
+<프로퍼티의 값에 접근하는 방법>
+네임을 알면 값을 추출할수있다.
+user.nickname 은 sachim을 return한다.
+이렇게 점으로 표현하는것을 dot notation이라고 한다.
+
+그런데 이때, 네임이 띄어쓰기를 포함한 여러 단어인경우 dot notation을 사용할수없다.
+user.likes birds
+따라서 대괄호표기법(square bracket notation)을 써야한다.
+user["likes birds"]
+단, 대괄호표기법에서는 대괄호안에 문자열을 넣는다 즉 큰따옴표가 필요하다.
+
+네임으로 값을 찾을수도있고,
+네임으로 값을 대입할수도있다.
+
+만일 없는 네임에 값을 대입하면 새로운 프로퍼티를 만들어서 값을 넣는다.
+
+
+let user = {};
+
+// set
+user["likes birds"] = true;
+
+// get
+alert(user["likes birds"]); // true
+
+// delete
+delete user["likes birds"];
+
+셋, 갯, 딜리트 라고부른다.

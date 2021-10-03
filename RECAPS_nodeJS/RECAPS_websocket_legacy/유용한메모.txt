@@ -1,0 +1,30 @@
+크롬 주소창에서 자동완성 되었을때,
+자동완성을 안쓸려면 del을 누르면된다.
+그럼 삭제됨
+
+예쁜 css ui를 만드는게 귀찮다면?
+https://brunch.co.kr/@clay1987/93
+https://www.slant.co/topics/150/~best-css-framework
+
+css프레임워크를 쓰면된다.
+부트스트랩(트위터)
+시맨틱UI등을 사용하면 된다.
+
+vscode에서
+html 기본양식을 자동완성하고싶으면
+html:을친다음
+인텔리센스자동완성에서 방향키 한칸을 내려서
+html:5를 선택해서 엔터하면된다.
+
+html에서
+
+    meta(charset="UTF-8") 
+        // 인코딩설정
+    meta(http-equiv="X-UA-Compatible", content="IE=edge") 
+        //인터넷익스플로러로도 볼수있게하기
+    meta(name="viewport", content="width=device-width, initial-scale=1.0") 
+        //애플이 만든거임. w3c에없음(표준이아님) 아이폰과 아이패드에서 볼수있게하기.
+        //상하좌우,더블탭,확대축소를 통해 뷰포트 배율을 바꿀수있게한다.
+    
+    https://joshua-dev-story.blogspot.com/2020/09/javascript-ip.html
+    아이피주소얻는법. js만으로는 출력할수없다.

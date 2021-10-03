@@ -1,0 +1,11 @@
+
+//fake database를 만든다.
+const sockets = [];
+
+모든 리스트에 대해서 각각 한번씩 함수를 실행하고싶으면,
+for문을 직접만들필요가없다. 그냥 자바스크립트api를 쓴다
+sockets.forEach(aSocket=>aSocket.send(message));
+
+sockets 리스트를 열어서
+모든 aSocket(지칭용 argument)에 대해
+aSocket.send(message))를 실행한다.

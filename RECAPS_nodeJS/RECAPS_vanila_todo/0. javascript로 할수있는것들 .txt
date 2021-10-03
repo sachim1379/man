@@ -1,0 +1,13 @@
+
+
+javaScript + ios,android native app = React native
+
+javaScript + desktop(windows, Mac, Linux) native app = Electron
+Electron으로 만든 앱 : vs code, twitch, slack, Figma
+
+javaScript + Backend = node.js
+
+Socket.io : 채팅, 실시간 기능
+
+javascript + machineLearning = ml5.js
+
